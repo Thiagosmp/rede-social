@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Modal = ({ message, onClose }: { message: string; onClose: () => void }) => {
+interface IModalProps {
+  message: string;
+  onClose: () => void;
+}
+
+const Modal = ({ message, onClose }: IModalProps) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="flex flex-col items-center justify-center gap-8 bg-white p-6 rounded-xl shadow-lg text-center w-96 h-52" >

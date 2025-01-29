@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface AuthInputProps {
+interface IAuthInputProps {
   newState: (state:string) => void;
   label: string;
   isPassword?: boolean;
 }
 
-const AuthInput = (props:AuthInputProps) => {
+const AuthInput = (props:IAuthInputProps) => {
   return (
     <div className='flex flex-col justify-between items-start'>
       <label>{props.label}</label>

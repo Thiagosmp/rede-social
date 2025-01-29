@@ -9,8 +9,6 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { makeRequest } from '../../../../axios';
 
-
-
 const Register = () => {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');

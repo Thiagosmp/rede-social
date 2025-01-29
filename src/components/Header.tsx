@@ -7,13 +7,13 @@ import { TbMessageCircle } from "react-icons/tb";
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-interface User {
+interface IUser {
   userName: string;
   userImg: string;
 }
 
 const Header = () => {
-  const [user, setUser] = useState<User>({
+  const [user, setUser] = useState<IUser>({
     userName: '',
     userImg: ''
   });
@@ -25,7 +25,6 @@ const Header = () => {
     if (value) {
       setUser(JSON.parse(value));
     }
-    
   }, []);
 
   const handleLogout = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -56,7 +55,7 @@ const Header = () => {
             {user.userImg ? (
               <Image src={user.userImg} alt="Icone do Perfil" width={32} height={32} className='rounded-full' />
             ) : (
-              <div className='w-8 h-8 bg-gray-300 rounded-full'></div>
+              <Image src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt="Ícone do Perfil" width={32} height={32} className='rounded-full' />
             )}
             <span className='text-gray-600 font-bold'>{user.userName}</span>
           </button>
